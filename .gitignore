@@ -73,3 +73,6 @@ temp/
 
 # Bundle analyzer
 .next-bundle-analyzer/
+
+# Folder holders
+.nothing
