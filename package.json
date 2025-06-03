@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "concat-docs": "python concat_files.py --types md .json --levels 9 --out-name all_docs.txt",
+    "project-tree": "powershell -c \"'PROJECT ROOT' | Out-File project_tree.txt; tree /f /a | Select-Object -Skip 3 | Out-File project_tree.txt -Append\""
   },
   "dependencies": {
     "react": "^19.0.0",
