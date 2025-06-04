@@ -1,1 +1,1 @@
-Please refer to @feature_name-PRD.md and list out tasks using @guide.list-tasks.md
+Following the steps listed in @/pm/guides/guide.list-tasks.md, develop a task list for the feature outlined @/pm/tasks/prd-{feature-name}.md

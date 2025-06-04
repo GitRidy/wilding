@@ -1,38 +1,30 @@
----
-description: 
-globs: 
-alwaysApply: false
----
-# Task List Management
+**File Purpose**: Guidelines for executing PRD-specific tasks and updating the task list to track progress
 
-Guidelines for managing task lists in markdown files to track progress on completing a PRD
+## Goal
 
-## Task Implementation
-- **One sub-task at a time:** Do **NOT** start the next sub‑task until you ask the user for permission and they say “yes” or "y"
-- **Completion protocol:**  
-  1. When you finish a **sub‑task**, immediately mark it as completed by changing `[ ]` to `[x]`.  
-  2. If **all** subtasks underneath a parent task are now `[x]`, also mark the **parent task** as completed.  
-- Stop after each sub‑task and wait for the user’s go‑ahead.
+Execute the next uncompleted sub-task per the task list for a given feature-specific PRD and update task status in the task list markdown file
 
-## Task List Maintenance
+## Steps
 
-1. **Update the task list as you work:**
-   - Mark tasks and subtasks as completed (`[x]`) per the protocol above.
-   - Add new tasks as they emerge.
+1. The user will ask you to comment or continue with a target task
 
-2. **Maintain the “Relevant Files” section:**
-   - List every file created or modified.
-   - Give each file a one‑line description of its purpose.
+2. Identify the next uncompleted sub-task for that task
 
-## AI Instructions
+3. Complete the sub-task
 
-When working with task lists, the AI must:
+4. Do not yet attempt further sub-tasks
 
-1. Regularly update the task list file after finishing any significant work.
-2. Follow the completion protocol:
-   - Mark each finished **sub‑task** `[x]`.
-   - Mark the **parent task** `[x]` once **all** its subtasks are `[x]`.
-3. Add newly discovered tasks.
-4. Keep “Relevant Files” accurate and up to date.
-5. Before starting work, check which sub‑task is next.
-6. After implementing a sub‑task, update the file and then pause for user approval.
+5. After sub-task completion:
+   
+    - Mark it as done in the PRD-specific task list by changing `[ ]` to `[x]`.
+    - If **all** subtasks for a parent task are now done, also mark the **parent task** as done.
+    - Add any new sub-tasks if it is now clear they are needed to complete the parent task
+    - In the `Relevant Files` section of the PRD task list, list every file created or modified in the format: File-name: one-line purpose description
+
+6. Stop and wait for the user’s approval to continue with the next sub-task
+
+## Task List File
+
+- **Location**: `/pm/tasks/`
+
+- **Filename**: `tasks-prd-{feature-name}.md`

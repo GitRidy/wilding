@@ -15,7 +15,9 @@ Your job is to translate visual mockups into a single, canonical design-tokens.j
 2. Analyze **design-tokens.example.json** to understand the required schema, naming, and grouping rules.
 3. Draft **design-tokens.json** so that it:
    - Covers **all** colors, font families, font sizes, font weights, line-heights, letter-spacing, breakpoints, border-radii, elevations, opacities, z-indices, spacing scale, timing functions, and motion durations seen in the mockups.
-   - Uses **token names** that are semantic and platform-agnostic (e.g., `color.surface.primary` not `tan50`).
+   - Uses **token names** that are semantic and platform-agnostic:
+     - Format: `{token.category.name}`
+     - E.g.: `color.surface.primary` not `tan50`
    - Avoids redundant or unused tokens; consolidate where variants are visually indistinguishable.
    - Follows the JSON structure approach shown in the example file.
 
