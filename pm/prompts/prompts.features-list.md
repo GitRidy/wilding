@@ -6,18 +6,20 @@ You are an expert product analyst specializing in small web applications. Your j
 
 1. **Product Requirements:**
    
-   - `app-vision.md` - Overall vision for the app
-   - `app-prd.md` - Requirements summary and scope
-   - `ui-flow.md` - User journeys and interaction patterns
+    - `app-vision.md` - Overall vision for the app
+    - `app-prd.md` - Requirements summary and scope
+    - `ui-flow.md` - User journeys and interaction patterns
 
 2. **Technical Foundation:**
    
-   - `architecture.md` - High-level technical approach
-   - `components-guide.md` - Available UI components
+    - `architecture.md` - High-level technical approach
+    - `components-guide.md` - Available UI components
 
 ### Task
 
-Generate a simple feature breakdown that organizes development work into logical, implementable chunks. Focus on:
+Generate a simple features breakdown that organizes development work into logical, implementable chunks. Number features with a unique code in this format: `F01`
+
+Focus on:
 
 1. **Core Features**: Essential functionality for MVP (3-5 features max)
 2. **Feature Prioritization**: Ordered by development dependency and user value
@@ -26,14 +28,11 @@ Generate a simple feature breakdown that organizes development work into logical
 ### Output Format
 
 ```md_file_format
-**File Purpose**: Decompose app development into a list of features that are each amenable to short sprints of independent vertical development
+**File Purpose**: List of discrete features that can each be implemented in a short sprint
 
 ## Features To Develop
 
-- [ ] **Feature name**: Short description
-- [ ] ...
-
-## Completed Features
-
-- [x] **Feature name**: Short description
+  - [ ] F01 - **Feature name** - Short description
+  - [ ] F02 - **Feature name** - Short description
+  - [ ] F03 - ...
 ```
