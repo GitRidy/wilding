@@ -1,61 +1,221 @@
-**File Purpose**: Defines high-level architectural structure and key components
+# Application Architecture
 
+## Overview
 
-## 1. Application Overview
+This architecture defines a pragmatic foundation for a small Next.js 15 application, prioritizing simplicity and rapid development. The stack leverages:
 
-### 1.1 Core Architectural Approach
+- **Next.js 15 App Router** for file-based routing and server actions
+- **TypeScript** for type safety and maintainability
+- **Tailwind CSS** with custom design tokens for styling
+- **React Context & Hooks** for lightweight state management
+- **localStorage** for simple client-side persistence
 
-### 1.2 Key Design Principles
+The approach enables fast iteration, clear separation of concerns, and direct mapping to the design system and user flows.
 
+---
 
-## 2. Component Structure
+## Project Structure
 
-### 2.1 Server vs Client Components
+A clean, scalable folder hierarchy supports modularity and clarity:
 
-### 2.2 Component Organization
+```
+src/
+  app/
+    layout.tsx           # Root layout
+    page.tsx             # Main entry page
+    favorites/
+      page.tsx           # Favorites page
+    prompt/
+      page.tsx           # Prompt generator page
+    api/
+      prompts/route.ts   # API route for prompts
+  components/
+    ui/
+      Button.tsx
+      Card.tsx
+      Input.tsx
+    feature/
+      PromptGenerator.tsx
+      FavoritesList.tsx
+    layout/
+      Header.tsx
+      Navigation.tsx
+  lib/
+    fetcher.ts           # Enhanced fetch utility
+    useLocalStorage.ts   # Custom hook for persistence
+    useFavorites.ts      # Feature-specific hook
+  types/
+    prompt.d.ts
+    favorites.d.ts
+  styles/
+    globals.css
+    tokens.css           # CSS custom properties from design tokens
+```
 
-### 2.3 Shared UI Elements
+---
 
+## Component Architecture
 
-## 3. Data Management
+Components are organized for simplicity and reusability:
 
-### 3.1 Data Fetching Strategy
+- **UI Components**: Basic building blocks (`Button`, `Card`, `Input`), styled with design tokens.
+- **Feature Components**: Implement app features (`PromptGenerator`, `FavoritesList`).
+- **Layout Components**: Structure the UI (`Header`, `Navigation`).
+- **Composition Patterns**: Favor composition over inheritance for flexibility.
 
-### 3.2 State Management Approach
+**Example: Simple UI Button with Design Token**
 
-### 3.3 Server Actions Implementation
+```tsx
+// src/components/ui/Button.tsx
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
+export function Button({ children, ...props }: ButtonProps) {
+  return (
+    <button
+      className="px-4 py-2 rounded bg-[var(--color-primary)] text-[var(--color-on-primary)]"
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+```
+Usage of tokens: `{color.primary}`, `{color.on-primary}`
 
-## 4. Routing & Navigation
+---
 
-### 4.1 Route Organization
+## State Management
 
-### 4.2 Authentication Flow (if applicable)
+State is managed with React primitives and simple patterns:
 
+- **Local State**: `useState` and `useReducer` for component state.
+- **App-wide State**: React Context for global data (e.g., current prompt, favorites).
+- **Custom Hooks**: Encapsulate logic for reusability.
+- **Persistence**: `localStorage` via custom hooks.
 
-## 5. External Dependencies
+**Example: Favorites Context**
 
-### 5.1 Third-Party Services
+```tsx
+// src/lib/useFavorites.ts
+import { createContext, useContext, useState, useEffect } from "react";
 
-### 5.2 API Integration Points
+type Favorite = { id: string; text: string };
+type FavoritesContextValue = {
+  favorites: Favorite[];
+  addFavorite: (fav: Favorite) => void;
+  removeFavorite: (id: string) => void;
+};
 
+const FavoritesContext = createContext<FavoritesContextValue | undefined>(undefined);
 
-## 6. Deployment Strategy
+export function FavoritesProvider({ children }: { children: React.ReactNode }) {
+  const [favorites, setFavorites] = useState<Favorite[]>(() =>
+    JSON.parse(localStorage.getItem("favorites") || "[]")
+  );
 
-### 6.1 Hosting Approach
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
-### 6.2 Environment Configuration
+  const addFavorite = (fav: Favorite) =>
+    setFavorites((favs) => [...favs, fav]);
+  const removeFavorite = (id: string) =>
+    setFavorites((favs) => favs.filter((f) => f.id !== id));
 
+  return (
+    <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
+      {children}
+    </FavoritesContext.Provider>
+  );
+}
 
-## 7. Key Decisions & Rationale
+export function useFavorites() {
+  const ctx = useContext(FavoritesContext);
+  if (!ctx) throw new Error("useFavorites must be used within FavoritesProvider");
+  return ctx;
+}
+```
 
-### 7.1 Technology Choices
+---
 
-### 7.2 Performance Considerations
+## Styling Architecture
 
+Styling is driven by design tokens and Tailwind CSS:
 
-## 8. Future Considerations
+- **Tailwind CSS**: Configured with custom tokens from `design-tokens.json`
+- **CSS Custom Properties**: Tokens exposed as `--color-primary`, etc., in `tokens.css`
+- **Responsive Design**: Use tokenized breakpoints (`{breakpoint.sm}`, `{breakpoint.md}`)
+- **Dynamic Theming**: Easily support light/dark modes via CSS variables
 
-### 8.1 Scalability Notes
+**Example: tokens.css**
 
-### 8.2 Potential Refactoring Points
+```css
+:root {
+  --color-primary: {color.primary};
+  --color-on-primary: {color.on-primary};
+  --font-base: {font.base};
+  --space-sm: {spacing.sm};
+  /* ...other tokens... */
+}
+```
+
+**Example: Tailwind config extension**
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "var(--color-primary)",
+        "on-primary": "var(--color-on-primary)",
+      },
+    },
+  },
+};
+```
+
+---
+
+## Data Layer
+
+Data flow uses Next.js 15 conventions for simplicity:
+
+- **Server Actions**: Handle form submissions and mutations server-side.
+- **API Routes**: `app/api/` for simple REST endpoints.
+- **Enhanced Fetch**: Utility for automatic caching and error handling.
+- **Loading & Error States**: Simple UI feedback patterns.
+- **Persistence**: Use `localStorage` for client-side data.
+
+**Example: Server Action for Prompt Submission**
+
+```tsx
+// src/app/prompt/actions.ts
+"use server";
+import { revalidatePath } from "next/cache";
+
+export async function submitPrompt(formData: FormData) {
+  const prompt = formData.get("prompt") as string;
+  // Save to DB or file here
+  revalidatePath("/prompt");
+}
+```
+
+**Example: Enhanced Fetch Utility**
+
+```ts
+// src/lib/fetcher.ts
+export async function fetcher<T>(url: string): Promise<T> {
+  const res = await fetch(url, { cache: "force-cache" });
+  if (!res.ok) throw new Error("Failed to fetch");
+  return res.json();
+}
+```
+
+---
+
+## Architecture Principles
+
+- **Simplicity First**: Prefer straightforward solutions.
+- **Rapid Development**: Optimize for MVP speed.
+- **Maintainability**: Keep the codebase easy to understand and extend.

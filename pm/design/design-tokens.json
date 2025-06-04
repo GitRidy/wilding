@@ -1,0 +1,231 @@
+{
+    "color": {
+        "surface": {
+            "app": {
+                "value": "#132114"
+            },
+            "device": {
+                "value": "#1e2c1c"
+            },
+            "card": {
+                "value": "#ccc19e"
+            },
+            "nav": {
+                "value": "#1c1b0e"
+            }
+        },
+        "text": {
+            "primary": {
+                "value": "#1b2f1d"
+            },
+            "heading": {
+                "value": "#e3e6d0"
+            },
+            "icon": {
+                "value": "#c8bf9b"
+            },
+            "inverse": {
+                "value": "#ffffff"
+            }
+        },
+        "accent": {
+            "calm": {
+                "value": "#62827c"
+            },
+            "growth": {
+                "value": "#5c4e25"
+            },
+            "mystic": {
+                "value": "#4d3b52"
+            },
+            "energy": {
+                "value": "#a24428"
+            },
+            "affection": {
+                "value": "#b5543a"
+            },
+            "flow": {
+                "value": "#275752"
+            }
+        },
+        "neutral": {
+            "white": {
+                "value": "#ffffff"
+            },
+            "black": {
+                "value": "#000000"
+            }
+        }
+    },
+    "typography": {
+        "font-family": {
+            "display": {
+                "value": "'EB Garamond',serif"
+            },
+            "body": {
+                "value": "'EB Garamond',serif"
+            }
+        },
+        "font-size": {
+            "xs": {
+                "value": 12
+            },
+            "sm": {
+                "value": 14
+            },
+            "md": {
+                "value": 16
+            },
+            "lg": {
+                "value": 20
+            },
+            "xl": {
+                "value": 24
+            },
+            "2xl": {
+                "value": 30
+            },
+            "3xl": {
+                "value": 36
+            }
+        },
+        "font-weight": {
+            "normal": {
+                "value": 400
+            },
+            "semibold": {
+                "value": 600
+            },
+            "bold": {
+                "value": 700
+            }
+        },
+        "line-height": {
+            "tight": {
+                "value": 1.1
+            },
+            "normal": {
+                "value": 1.4
+            },
+            "relaxed": {
+                "value": 1.6
+            }
+        },
+        "letter-spacing": {
+            "normal": {
+                "value": 0
+            },
+            "wide": {
+                "value": 0.02
+            }
+        }
+    },
+    "spacing": {
+        "0": {
+            "value": 0
+        },
+        "1": {
+            "value": 4
+        },
+        "2": {
+            "value": 8
+        },
+        "3": {
+            "value": 12
+        },
+        "4": {
+            "value": 16
+        },
+        "5": {
+            "value": 20
+        },
+        "6": {
+            "value": 24
+        },
+        "8": {
+            "value": 32
+        },
+        "10": {
+            "value": 40
+        },
+        "12": {
+            "value": 48
+        }
+    },
+    "radius": {
+        "sm": {
+            "value": 4
+        },
+        "md": {
+            "value": 12
+        },
+        "lg": {
+            "value": 24
+        },
+        "pill": {
+            "value": 999
+        }
+    },
+    "elevation": {
+        "1": {
+            "value": "0 2px 4px rgba(0,0,0,0.1)"
+        },
+        "2": {
+            "value": "0 4px 10px rgba(0,0,0,0.15)"
+        }
+    },
+    "opacity": {
+        "disabled": {
+            "value": 0.4
+        }
+    },
+    "z-index": {
+        "base": {
+            "value": 0
+        },
+        "dropdown": {
+            "value": 1000
+        },
+        "modal": {
+            "value": 1100
+        },
+        "toast": {
+            "value": 1200
+        }
+    },
+    "breakpoints": {
+        "mobile": {
+            "value": 0
+        },
+        "tablet": {
+            "value": 640
+        },
+        "desktop": {
+            "value": 1024
+        },
+        "wide": {
+            "value": 1280
+        }
+    },
+    "motion": {
+        "duration": {
+            "fast": {
+                "value": 150
+            },
+            "base": {
+                "value": 300
+            },
+            "slow": {
+                "value": 500
+            }
+        },
+        "timing": {
+            "standard": {
+                "value": "cubic-bezier(0.4,0,0.2,1)"
+            },
+            "bounce": {
+                "value": "cubic-bezier(0.34,1.56,0.64,1)"
+            }
+        }
+    }
+}

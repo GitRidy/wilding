@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "pageName": "PromptEvolutionGeneration",
+    "route": "/",
+    "description": "Main generation screen for evolving prompts, as per mockup03.png. Features navigation, current prompt card, direction buttons, favorite toggle, and clear/reset actions.",
+    "viewport": { "width": 430, "height": 932 },
+    "generatedFrom": "mockup03.png",
+    "timestamp": "2025-06-04T01:19:56Z"
+  },
+  "layout": {
+    "type": "container",
+    "backgroundColor": "{color.surface.app}",
+    "padding": "{spacing.4}",
+    "align": "center",
+    "children": [
+      {
+        "component": "NavigationBar",
+        "position": { "top": 0, "left": 0, "right": 0 },
+        "height": 56,
+        "styles": {
+          "backgroundColor": "{color.surface.nav}",
+          "padding": "{spacing.2} {spacing.4}",
+          "borderRadius": "{radius.md}"
+        },
+        "children": [
+          {
+            "component": "AppLogo",
+            "styles": {
+              "height": 32,
+              "width": 32,
+              "marginRight": "{spacing.2}"
+            }
+          },
+          {
+            "component": "NavTitle",
+            "text": "Prompt Evolution",
+            "styles": {
+              "fontFamily": "{typography.font-family.display}",
+              "fontSize": "{typography.font-size.lg}",
+              "color": "{color.text.heading}",
+              "fontWeight": "{typography.font-weight.bold}"
+            }
+          }
+        ]
+      },
+      {
+        "component": "PromptCard",
+        "styles": {
+          "backgroundColor": "{color.surface.card}",
+          "borderRadius": "{radius.lg}",
+          "boxShadow": "{elevation.2}",
+          "padding": "{spacing.6}",
+          "marginTop": "{spacing.6}",
+          "marginBottom": "{spacing.4}",
+          "width": "100%",
+          "maxWidth": 380
+        },
+        "children": [
+          {
+            "component": "CardHeader",
+            "styles": {
+              "display": "flex",
+              "justifyContent": "space-between",
+              "alignItems": "center"
+            },
+            "children": [
+              {
+                "component": "EditIcon",
+                "styles": {
+                  "color": "{color.text.icon}",
+                  "fontSize": "{typography.font-size.md}",
+                  "marginRight": "{spacing.1}"
+                }
+              },
+              {
+                "component": "FavoriteIcon",
+                "styles": {
+                  "color": "{color.accent.affection}",
+                  "fontSize": "{typography.font-size.md}"
+                }
+              }
+            ]
+          },
+          {
+            "element": "p",
+            "text": "{currentPrompt}",
+            "styles": {
+              "fontFamily": "{typography.font-family.display}",
+              "fontSize": "{typography.font-size.xl}",
+              "color": "{color.text.primary}",
+              "lineHeight": "{typography.line-height.relaxed}",
+              "marginTop": "{spacing.3}",
+              "marginBottom": "{spacing.6}"
+            }
+          },
+          {
+            "component": "CardFooter",
+            "styles": {
+              "display": "flex",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "gap": "{spacing.2}",
+              "marginTop": "{spacing.3}"
+            },
+            "children": [
+              {
+                "component": "ClearButton",
+                "icon": "eraser",
+                "ariaLabel": "Clear Prompt",
+                "styles": {
+                  "backgroundColor": "transparent",
+                  "color": "{color.accent.calm}",
+                  "borderRadius": "{radius.pill}",
+                  "padding": "{spacing.1}",
+                  "fontSize": "{typography.font-size.lg}"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "DirectionButtonRow",
+        "styles": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "gap": "{spacing.2}",
+          "marginTop": "{spacing.4}",
+          "marginBottom": "{spacing.8}",
+          "width": "100%",
+          "maxWidth": 380
+        },
+        "children": [
+          {
+            "component": "DirectionButton",
+            "variant": "calm",
+            "icon": "leaf",
+            "label": "Calm",
+            "styles": {
+              "backgroundColor": "{color.accent.calm}",
+              "color": "{color.text.inverse}",
+              "borderRadius": "{radius.md}",
+              "padding": "{spacing.2} {spacing.3}",
+              "fontSize": "{typography.font-size.md}",
+              "boxShadow": "{elevation.1}"
+            }
+          },
+          {
+            "component": "DirectionButton",
+            "variant": "growth",
+            "icon": "tree",
+            "label": "Growth",
+            "styles": {
+              "backgroundColor": "{color.accent.growth}",
+              "color": "{color.text.inverse}",
+              "borderRadius": "{radius.md}",
+              "padding": "{spacing.2} {spacing.3}",
+              "fontSize": "{typography.font-size.md}",
+              "boxShadow": "{elevation.1}"
+            }
+          },
+          {
+            "component": "DirectionButton",
+            "variant": "mystic",
+            "icon": "star",
+            "label": "Mystic",
+            "styles": {
+              "backgroundColor": "{color.accent.mystic}",
+              "color": "{color.text.inverse}",
+              "borderRadius": "{radius.md}",
+              "padding": "{spacing.2} {spacing.3}",
+              "fontSize": "{typography.font-size.md}",
+              "boxShadow": "{elevation.1}"
+            }
+          },
+          {
+            "component": "DirectionButton",
+            "variant": "energy",
+            "icon": "bolt",
+            "label": "Energy",
+            "styles": {
+              "backgroundColor": "{color.accent.energy}",
+              "color": "{color.text.inverse}",
+              "borderRadius": "{radius.md}",
+              "padding": "{spacing.2} {spacing.3}",
+              "fontSize": "{typography.font-size.md}",
+              "boxShadow": "{elevation.1}"
+            }
+          },
+          {
+            "component": "DirectionButton",
+            "variant": "affection",
+            "icon": "heart",
+            "label": "Affection",
+            "styles": {
+              "backgroundColor": "{color.accent.affection}",
+              "color": "{color.text.inverse}",
+              "borderRadius": "{radius.md}",
+              "padding": "{spacing.2} {spacing.3}",
+              "fontSize": "{typography.font-size.md}",
+              "boxShadow": "{elevation.1}"
+            }
+          },
+          {
+            "component": "DirectionButton",
+            "variant": "flow",
+            "icon": "flow",
+            "label": "Flow",
+            "styles": {
+              "backgroundColor": "{color.accent.flow}",
+              "color": "{color.text.inverse}",
+              "borderRadius": "{radius.md}",
+              "padding": "{spacing.2} {spacing.3}",
+              "fontSize": "{typography.font-size.md}",
+              "boxShadow": "{elevation.1}"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "breakpoints": {
+    "mobile": {
+      "maxWidth": 640,
+      "changes": {
+        "layout.padding": "{spacing.2}",
+        "PromptCard.styles.padding": "{spacing.3}",
+        "DirectionButtonRow.styles.gap": "{spacing.1}"
+      }
+    }
+  },
+  "interactions": [
+    {
+      "trigger": "DirectionButton:hover",
+      "effects": {
+        "boxShadow": "{elevation.2}",
+        "transform": "translateY(-2)",
+        "transition": "all {motion.duration.fast}ms {motion.timing.standard}"
+      }
+    },
+    {
+      "trigger": "FavoriteIcon:active",
+      "effects": {
+        "color": "{color.accent.affection}"
+      }
+    },
+    {
+      "trigger": "ClearButton:active",
+      "effects": {
+        "opacity": "{opacity.disabled}"
+      }
+    }
+  ],
+  "accessibility": {
+    "landmarks": ["navigation", "main"],
+    "headingHierarchy": ["h1"],
+    "focusFlow": ["NavTitle", "PromptCard", "DirectionButtonRow"]
+  }
+}
