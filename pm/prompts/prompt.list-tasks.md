@@ -1,1 +1,0 @@
-Following the steps listed in @/pm/guides/guide.list-tasks.md, develop a task list for the feature outlined @/pm/tasks/prd-{feature-name}.md

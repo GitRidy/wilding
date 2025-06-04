@@ -14,11 +14,13 @@ Creating a step-by-step task list in Markdown format based on an existing, featu
 4. **List Tasks**:
     - Generate all high-level tasks needed to implement the feature outlined in the PRD
     - *Task count*: Aim for 3 to 7 tasks, where each task can readily be completed via a handful of manageable sub-tasks
+    - Give each task an id that is unique (for the feature), in this format: `T1` 
 5. **List Sub-Tasks**: 
     - Decompose each task into discrete sub-tasks
     - Ensure sub-tasks collectively complete the task
     - Ensure sub-tasks address implementation details outlined in or implied by the PRD
     - If the task is simple enough to be completed in one step, don't list sub-tasks
+    - Give each sub-task an id like this: `T1.1`
 6. **Identify Relevant Files:**
     - Based on the PRD, tasks, sub-tasks, identify files that will need to be created or modified.
     - List these files under the `Relevant Files` section
@@ -50,10 +52,10 @@ The generated task list must follow this structure:
 
 ## Tasks
 
-- [ ] 1 Task name: short description
-  - [ ] 1.1 Sub-task name: short description
-  - [ ] 1.2 Sub-task name: short description
-- [ ] 2 Task name: short description
-  - [ ] 2.1 Sub-task name: short description
-- [ ] 3 Simple task: short description
+- [ ] T1 Task name: short description
+  - [ ] T1.1 Sub-task name: short description
+  - [ ] T1.2 Sub-task name: short description
+- [ ] T2 Task name: short description
+  - [ ] T2.1 Sub-task name: short description
+- [ ] T3 Simple task: short description
 ```

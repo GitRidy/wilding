@@ -21,10 +21,24 @@ Execute the next uncompleted sub-task per the task list for a given feature-spec
     - Add any new sub-tasks if it is now clear they are needed to complete the parent task
     - In the `Relevant Files` section of the PRD task list, list every file created or modified in the format: File-name: one-line purpose description
 
-6. Stop and wait for the user’s approval to continue with the next sub-task
+6. Optional: If (and only if) you have gathered critical or high-value learnings during your development work, condense them into a succinct note or comment, and add them to `@/pm/dev-notes.md`
 
-## Task List File
+7. Stop and wait for the user’s approval to continue with the next sub-task
 
-- **Location**: `/pm/tasks/`
+# 
 
-- **Filename**: `tasks-prd-{feature-name}.md`
+## Key Reference Files
+
+- `@/pm/tasks/prd-{feature-name}.md`
+
+- `@/pm/tasks/tasks-prd-{feature-name}.md`
+
+- `@/pm/design/architecture.md`
+
+- `@/pm/design/components-guide.md `
+
+- `@/pm/design/design-brief.md `
+
+- `@/pm/design/design-tokens.json`
+
+- `@/pm/dev-notes.md`

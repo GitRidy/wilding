@@ -10,7 +10,7 @@ Assume the primary reader of the PRD is a **junior developer**. Requirements sho
 
 ## Steps
 
-1. **Initiation:** The user will describe a new feature and ask you to write a PRD for that feature
+1. **Initiation:** The user will describe a new feature and ask you to write a PRD for that feature. For a description of the feature, refer to: `@/pm/tasks/features-list.md` 
 2. **Ask Clarifying Questions:**
     - Identify any critical missing context or information required to write the PRD
     - You need to understand the "what" and "why" of the feature, not the "how" (which the junior developer will figure out).
@@ -88,9 +88,3 @@ E.g.:
   - Increase user engagement by 10%
   - Reduce support tickets related to X
 ```
-
-## Output File Format
-
-* **Format:** Markdown (`.md`)
-* **Location:** `/tasks/`
-* **Filename:** `prd-[feature-name].md`

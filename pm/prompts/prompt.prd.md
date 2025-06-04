@@ -1,0 +1,1 @@
+Please follow @/pm/guides/guide.prd.md and create a PRD for feature F01 - Feature Name

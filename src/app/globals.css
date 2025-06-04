@@ -1,26 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surface Colors */
+  --color-surface-app: #132114;
+  --color-surface-device: #1e2c1c;
+  --color-surface-card: #ccc19e;
+  --color-surface-nav: #1c1b0e;
+  
+  /* Text Colors */
+  --color-text-primary: #1b2f1d;
+  --color-text-heading: #e3e6d0;
+  --color-text-icon: #c8bf9b;
+  --color-text-inverse: #ffffff;
+  
+  /* Accent Colors */
+  --color-accent-calm: #62827c;
+  --color-accent-growth: #5c4e25;
+  --color-accent-mystic: #4d3b52;
+  --color-accent-energy: #a24428;
+  --color-accent-affection: #b5543a;
+  --color-accent-flow: #275752;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-surface-app);
+  --color-foreground: var(--color-text-heading);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--color-surface-app);
+  color: var(--color-text-heading);
+  font-family: 'EB Garamond', serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Base styles for the app */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* For narrow window beside DAW */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

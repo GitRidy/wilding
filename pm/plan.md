@@ -1,56 +1,46 @@
 **File Purpose**: Project phases, milestones, and timeline
 **Usage**: After each step is complete, mark it complete in this file
 
-
 # Phase A - Setup
 
 1. [ ] Follow steps in KIT_README.md
 
-
 # Phase B - Planning
 
-1. [ ] Update `README.md`
-2. [ ] Update `app-vision.md`
-3. [ ] Update `app-prd.md`
-4. [ ] Update `app-tech-spec.md`
-
+1. [ ] Write `app-vision.md`
+2. [ ] Complete `README.md`
+3. [ ] Complete `app-prd.md`
+4. [ ] Complete `app-tech-spec.md`
 
 # Phase C - Design
 
-1. [ ] Wireframes
-2. [ ] Reference Examples or Mockups
-3. [ ] UI Flow
-4. [ ] `design-brief.md`
-5. [ ] `components-guide.md`
-6. [ ] `design-tokens.json`
-7. [ ] `architecture.md`
-
+1. [ ] `design-brief.md`
+2. [ ] Sketch wireframes
+3. [ ] Generate mockups
+4. [ ] ui-flow.md
+5. [ ] Extract all visual properties into `design-tokens.json` | **prompt.design-tokens.md**
+6. [ ] Generate one `page-spec-{name}.md` file for each page, per mockup | **prompt.page-spec.md**
+7. [ ] Update `components-guide.md` | **prompt.components-guide.md**
+8. [ ] `architecture.md` | **prompt.architecture.md**
 
 # Phase D - Development
 
-Develop iteratively, by feature. For each feature, follow these steps:
+- List features: **prompt.features-list.md**
 
-## D1 - Create feature PRD
+- Develop iteratively, by feature:
 
-```prompt
-Please use @guide.make-prd.md and create a PRD for the following feature:
-[Describe feature in detail]
-Use Context7
-Reference these files to help you: @file.xyz
-```
+## D1 - Create Feature PRD
+
+- **prompt.prd.md**
+- Review PRD and tweak
 
 Review PRD and tweak if needed
 
-## D2 - List tasks
+## D2 - List Tasks
 
-```prompt
-Please refer to @feature_name-PRD.md and list out tasks using @guide.list-tasks.md
-```
+- **prompt.task-list.md**
+- Review task list and tweak
 
-Review task list and tweak if needed
+## D3 - Do Tasks
 
-## D3 - Do tasks
-
-```prompt
-Please start on task 1.1 and use @guide.do-tasks.md
-```
+- **prompt.task.md** 
