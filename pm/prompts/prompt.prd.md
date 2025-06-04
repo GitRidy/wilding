@@ -1,1 +1,9 @@
-Please follow @/pm/guides/guide.prd.md and create a PRD for feature F01 - Feature Name
+For feature
+
+  F01 - Feature Name
+
+please create the PRD,
+
+following guide
+
+  @/pm/guides/guide.prd.md

@@ -18,8 +18,8 @@ Assume the primary reader of the PRD is a **junior developer**. Requirements sho
     - Based on the feature description and answers to clarifying questions, generate a PRD per the structure below.
 4. **Save PRD as Markdown file:**
     - **Location**: `/pm/tasks/`
-    - **Filename**: `prd-{feature-name}.md`
-      5- *Do not begin implementing the PRD*
+    - **Filename**: `F{##}-prd-{feature-name}.md`
+5. *Do not begin implementing the PRD*
 
 ## Clarifying Question Examples
 
@@ -44,6 +44,7 @@ The generated PRD must follow this structure:
 
 # Feature-Specific PRD
 
+**Feature Id**: F{##}
 **Feature Name**: {Short feature name}
 **Feature Description**: {Brief description of feature}
 

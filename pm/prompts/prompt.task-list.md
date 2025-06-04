@@ -1,3 +1,13 @@
-Please follow @/pm/guides/guide.task-list.md to create a task list based on the PRD for feature F01 - Feature Name.
+For feature
 
-- Refer to feature PRD: @/pm/tasks/prd-feature.md
+  F01 - Feature Name
+
+please create the task list,
+
+following the guide
+
+  @/pm/guides/guide.task-list.md
+
+and refering to the PRD
+
+  @/pm/tasks/F01-prd-feature.md

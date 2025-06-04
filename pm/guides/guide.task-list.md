@@ -34,7 +34,7 @@ Assume the primary reader of the task list is a **junior developer** who will im
 
 - **Format:** Markdown (`.md`)
 - **Location:** `/pm/tasks/`
-- **Filename:** `tasks-prd-{feature-name}.md` (e.g., `tasks-prd-user-profile-editing.md`)
+- **Filename:** `F{##}-tasks-{feature-name}.md` (e.g., `F04-tasks-user-profile-editing.md`)
 
 ## Task List File Structure
 

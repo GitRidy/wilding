@@ -23,15 +23,13 @@ Execute the next uncompleted sub-task per the task list for a given feature-spec
 
 6. Optional: If (and only if) you have gathered critical or high-value learnings during your development work, condense them into a succinct note or comment, and add them to `@/pm/dev-notes.md`
 
-7. Stop and wait for the user’s approval to continue with the next sub-task
-
-# 
+7. Stop and wait for the user’s approval to continue with the next sub-task 
 
 ## Key Reference Files
 
-- `@/pm/tasks/prd-{feature-name}.md`
+- `@/pm/tasks/F{##}-prd-{feature-name}.md`
 
-- `@/pm/tasks/tasks-prd-{feature-name}.md`
+- `@/pm/tasks/F{##}-tasks-{feature-name}.md`
 
 - `@/pm/design/architecture.md`
 
