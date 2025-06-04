@@ -34,8 +34,7 @@ export default function PromptCard({
         p-6 
         mt-6 
         mb-4 
-        w-full 
-        max-w-[380px] 
+        w-full
         relative
         ${isEditing ? 'editing' : ''}
         ${className}

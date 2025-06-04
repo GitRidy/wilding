@@ -15,6 +15,11 @@ export interface PromptFormProps {
   isLoading?: boolean;
   
   /**
+   * Error message to display if prompt generation fails
+   */
+  error?: string | null;
+  
+  /**
    * Additional CSS classes to apply to the component
    */
   className?: string;
