@@ -23,7 +23,10 @@ Execute the next uncompleted sub-task per the task list for a given feature-spec
 
 6. Optional: If (and only if) you have gathered critical or high-value learnings during your development work, condense them into a succinct note or comment, and add them to `@/pm/dev-notes.md`
 
-7. Stop and wait for the user’s approval to continue with the next sub-task 
+7. Your next step depends on what the user told you for "--task-depth": 
+   
+    - --task-depth = 2 (**Sub-task**) or not specified: Stop and wait for the user’s approval to continue with the next sub-task 
+    - --task-depth = 1 (**Main task**): Loop back up to step 2 and continue doing sub-tasks until the main task is completed. After that, stop and wait for the user's approval to continue with the next main task
 
 ## Key Reference Files
 
