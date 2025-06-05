@@ -49,13 +49,16 @@
 
 ## Interface Elements
 - Large, prominent card displaying the current prompt
-- Six distinctly colored buttons for prompt evolution directions:
+- Six distinctly colored 'evolve chips' for prompt evolution directions:
   - Wild: For unexpected, boundary-pushing directions
   - Pure: For clear, focused, refined, and simplifying directions
   - Earthy: For grounded, organic, embodied, and natural directions
   - Classy: For sophisticated, elegant directions
   - Emotive: For feeling-centered, expressive directions
   - Complex: For intricate, layered, and nuanced directions
+- Evolve chips associated with the card component, not the page; laid out with 3 on each side of the card
+- Simple card component includes subtle, small action icons on the bottom right: Delete, Clear, & Edit; and a subtle, small favorite icon in the top right
+- Card panel component holds a simple card component, but adds the 6 circular evolve chips, the inside edges of which are slight tucked under the edge of the card
 - Simple navigation between generation screen and favorites
 - Clean, uncluttered favorites management interface
 
