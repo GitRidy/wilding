@@ -48,8 +48,8 @@
   - [x] T4.3 Test across breakpoints: Verify the UI adapts correctly to different screen sizes
 
 - [ ] T5 Design alignment: Refine design to match mockup
-  - [x] T5.1 Review design mockups and specifications: Understand the visual and functional requirements from the design mockups and any associated design specifications.
-  - [x] T5.2 Implement visual adjustments: Apply necessary CSS changes and component property adjustments to align the UI with the mockups.
+  - [ ] T5.1 Review design mockups and specifications: Understand the visual and functional requirements from the design mockups and any associated design specifications.
+  - [ ] T5.2 Implement visual adjustments: Apply necessary CSS changes and component property adjustments to align the UI with the mockups.
   - [ ] T5.3 Verify responsiveness across devices: Ensure the refined design maintains responsiveness and visual integrity on various screen sizes and orientations.
 
 - [ ] T6 Perform final testing and refinement: Ensure the feature meets all requirements
