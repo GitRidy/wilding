@@ -1,0 +1,197 @@
+/* DirectionButton component styles using design tokens */
+
+.directionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* spacing.2 */
+  padding: 12px 20px; /* spacing.3 spacing.5 */
+  border: none;
+  border-radius: 999px; /* radius.pill */
+  font-family: 'EB Garamond', serif; /* typography.font-family.body */
+  font-size: 16px; /* typography.font-size.md */
+  font-weight: 600; /* typography.font-weight.semibold */
+  line-height: 1.4; /* typography.line-height.normal */
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4,0,0.2,1); /* motion.duration.fast + motion.timing.standard */
+  position: relative;
+  overflow: hidden;
+  min-width: 100px;
+  text-align: center;
+  user-select: none;
+}
+
+.directionButton:focus {
+  outline: none;
+  ring: 2px solid currentColor;
+  ring-opacity: 0.5;
+  ring-offset: 2px;
+}
+
+.directionButton:active {
+  transform: translateY(1px);
+}
+
+/* Variant Styles using design tokens */
+
+.wild {
+  background-color: #a24428; /* color.accent.wild */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.wild:hover:not(:disabled) {
+  background-color: #8a3a22; /* darker shade of wild */
+  box-shadow: 0 4px 10px rgba(162, 68, 40, 0.3);
+}
+
+.pure {
+  background-color: #62827c; /* color.accent.pure */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.pure:hover:not(:disabled) {
+  background-color: #4d6560; /* darker shade of pure */
+  box-shadow: 0 4px 10px rgba(98, 130, 124, 0.3);
+}
+
+.earthy {
+  background-color: #5c4e25; /* color.accent.earthy */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.earthy:hover:not(:disabled) {
+  background-color: #4a3f1e; /* darker shade of earthy */
+  box-shadow: 0 4px 10px rgba(92, 78, 37, 0.3);
+}
+
+.classy {
+  background-color: #4d3b52; /* color.accent.classy */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.classy:hover:not(:disabled) {
+  background-color: #3e2e41; /* darker shade of classy */
+  box-shadow: 0 4px 10px rgba(77, 59, 82, 0.3);
+}
+
+.emotive {
+  background-color: #b5543a; /* color.accent.emotive */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.emotive:hover:not(:disabled) {
+  background-color: #9a462f; /* darker shade of emotive */
+  box-shadow: 0 4px 10px rgba(181, 84, 58, 0.3);
+}
+
+.complex {
+  background-color: #275752; /* color.accent.complex */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.complex:hover:not(:disabled) {
+  background-color: #1f4641; /* darker shade of complex */
+  box-shadow: 0 4px 10px rgba(39, 87, 82, 0.3);
+}
+
+/* State Styles */
+
+.disabled {
+  opacity: 0.4; /* opacity.disabled */
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.disabled:hover {
+  background-color: inherit !important;
+  box-shadow: none !important;
+}
+
+.loading {
+  cursor: wait;
+  color: transparent;
+}
+
+/* Icon and Label Styles */
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.label {
+  font-weight: 600; /* typography.font-weight.semibold */
+  letter-spacing: 0.02em; /* typography.letter-spacing.wide */
+}
+
+/* Loading Spinner */
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Styles */
+
+@media (max-width: 640px) { /* breakpoints.tablet */
+  .directionButton {
+    padding: 10px 16px; /* spacing.2.5 spacing.4 */
+    font-size: 14px; /* typography.font-size.sm */
+    min-width: 80px;
+  }
+  
+  .icon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .directionButton {
+    padding: 8px 12px; /* spacing.2 spacing.3 */
+    font-size: 13px;
+    min-width: 70px;
+  }
+  
+  .icon {
+    font-size: 14px;
+  }
+}
+
+/* Focus visible for better accessibility */
+.directionButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .directionButton {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .directionButton {
+    transition: none;
+  }
+  
+  .spinner {
+    animation: none;
+  }
+}

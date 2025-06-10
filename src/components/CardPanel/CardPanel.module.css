@@ -1,0 +1,116 @@
+/* CardPanel component styles using design tokens */
+
+.cardPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Reasonable max width for the entire panel */
+  margin: 0 auto;
+  gap: 24px; /* spacing.6 */
+}
+
+.promptCardContainer {
+  width: 100%;
+  max-width: 600px; /* Slightly narrower than the full panel */
+}
+
+.directionButtonContainer {
+  width: 100%;
+  max-width: 700px; /* Allow buttons more space than the card */
+}
+
+/* Responsive breakpoints */
+
+/* Desktop and larger screens */
+@media (min-width: 1024px) { /* breakpoints.desktop */
+  .cardPanel {
+    gap: 32px; /* spacing.8 */
+    max-width: 900px;
+  }
+  
+  .promptCardContainer {
+    max-width: 650px;
+  }
+  
+  .directionButtonContainer {
+    max-width: 750px;
+  }
+}
+
+/* Tablet screens */
+@media (max-width: 1023px) and (min-width: 641px) { /* between tablet and desktop */
+  .cardPanel {
+    gap: 24px; /* spacing.6 */
+    padding: 0 20px; /* spacing.5 horizontal */
+  }
+  
+  .promptCardContainer {
+    max-width: 550px;
+  }
+  
+  .directionButtonContainer {
+    max-width: 600px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 640px) { /* breakpoints.tablet */
+  .cardPanel {
+    gap: 20px; /* spacing.5 */
+    padding: 0 16px; /* spacing.4 horizontal */
+  }
+  
+  .promptCardContainer {
+    max-width: none; /* Full width on mobile */
+  }
+  
+  .directionButtonContainer {
+    max-width: none; /* Full width on mobile */
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+  .cardPanel {
+    gap: 16px; /* spacing.4 */
+    padding: 0 12px; /* spacing.3 horizontal */
+  }
+}
+
+/* Ensure proper spacing within the app layout */
+.cardPanel + .cardPanel {
+  margin-top: 40px; /* spacing.10 */
+}
+
+/* Focus management for accessibility */
+.cardPanel:focus-within {
+  outline: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cardPanel {
+    border: 1px solid transparent;
+  }
+}
+
+/* Print styles */
+@media print {
+  .cardPanel {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .directionButtonContainer {
+    display: none; /* Hide interactive elements in print */
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .cardPanel * {
+    transition: none;
+    animation: none;
+  }
+}

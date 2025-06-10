@@ -1,9 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import PromptCard from '@/components/PromptCard';
 import PromptForm from '@/components/PromptForm';
-import ClearButton from '@/components/ClearButton';
+import { CardPanel } from '@/components/CardPanel';
 import { generatePrompt } from '@/lib/api';
 import { savePrompt, getPrompt, clearPrompt } from '@/lib/localStorage';
 
@@ -76,12 +75,13 @@ export default function Home() {
 
         <main className="w-full flex flex-col items-center justify-center">
           {prompt ? (
-            <div className="w-full flex flex-col items-center">
-              <PromptCard prompt={prompt} />
-              <div className="mt-4">
-                <ClearButton onClear={handleClear} />
-              </div>
-            </div>
+            <CardPanel
+              prompt={prompt}
+              onClear={handleClear}
+              onEdit={() => {/* TODO: Implement edit functionality in F04 */}}
+              onFavorite={() => {/* TODO: Implement favorites functionality in F03 */}}
+              onDirectionClick={(direction) => console.log(`${direction} evolution selected`)}
+            />
           ) : (
             <PromptForm
               onSubmit={handleSubmit}

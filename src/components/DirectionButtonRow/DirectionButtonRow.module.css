@@ -1,0 +1,131 @@
+/* DirectionButtonRow component styles using design tokens */
+
+.directionButtonRow {
+  display: flex;
+  width: 100%;
+  gap: 12px; /* spacing.3 */
+  padding: 0;
+  margin: 0;
+}
+
+/* Row Layout (Desktop) */
+.rowLayout {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid Layout (Mobile/Tablet) */
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px; /* spacing.3 */
+  justify-items: center;
+  align-items: center;
+}
+
+/* Responsive breakpoints */
+
+/* Desktop and larger screens - row layout */
+@media (min-width: 1024px) { /* breakpoints.desktop */
+  .directionButtonRow {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 16px; /* spacing.4 */
+  }
+  
+  .gridLayout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 16px; /* spacing.4 */
+  }
+}
+
+/* Tablet screens - transition to grid */
+@media (max-width: 1023px) and (min-width: 641px) { /* between tablet and desktop */
+  .rowLayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px; /* spacing.3 */
+    justify-items: center;
+  }
+  
+  .gridLayout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile screens - 2-column grid */
+@media (max-width: 640px) { /* breakpoints.tablet */
+  .rowLayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* spacing.2.5 */
+    justify-items: stretch;
+  }
+  
+  .gridLayout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* spacing.2.5 */
+    justify-items: stretch;
+  }
+  
+  .directionButtonRow {
+    gap: 10px; /* spacing.2.5 */
+  }
+}
+
+/* Very small mobile screens - single column */
+@media (max-width: 480px) {
+  .rowLayout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px; /* spacing.2 */
+  }
+  
+  .gridLayout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px; /* spacing.2 */
+  }
+  
+  .directionButtonRow {
+    gap: 8px; /* spacing.2 */
+  }
+}
+
+/* Ensure buttons fill available space on mobile */
+@media (max-width: 640px) {
+  .directionButtonRow > * {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Focus management for keyboard navigation */
+.directionButtonRow:focus-within {
+  outline: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .directionButtonRow {
+    border: 1px solid transparent;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .directionButtonRow * {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .directionButtonRow {
+    display: none;
+  }
+}

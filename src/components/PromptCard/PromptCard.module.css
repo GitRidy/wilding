@@ -1,0 +1,108 @@
+/* PromptCard component styles using design tokens */
+
+.promptCard {
+  background-color: #ccc19e; /* color.surface.card */
+  border-radius: 24px; /* radius.lg */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* elevation.2 */
+  padding: 24px; /* spacing.6 */
+  width: 100%;
+  position: relative;
+  transition: all 300ms cubic-bezier(0.4,0,0.2,1); /* motion.duration.base + motion.timing.standard */
+}
+
+.promptCard.editing {
+  ring: 2px solid #62827c; /* color.accent.pure */
+  ring-opacity: 0.5;
+}
+
+.promptText {
+  font-family: 'EB Garamond', serif; /* typography.font-family.body */
+  font-size: 24px; /* typography.font-size.xl */
+  color: #1b2f1d; /* color.text.primary */
+  line-height: 1.6; /* typography.line-height.relaxed */
+  font-weight: 400; /* typography.font-weight.normal */
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 8px 0; /* spacing.2 vertical */
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* spacing.8 */
+  height: 32px; /* spacing.8 */
+  border-radius: 999px; /* radius.pill */
+  border: none;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4,0,0.2,1); /* motion.duration.fast + motion.timing.standard */
+}
+
+.actionButton:focus {
+  outline: none;
+  ring: 2px solid currentColor;
+  ring-opacity: 0.5;
+}
+
+.editButton {
+  background-color: #62827c; /* color.accent.pure */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.editButton:hover {
+  background-color: #4d6560; /* darker shade of pure */
+}
+
+.editButton.active {
+  background-color: #4d6560;
+}
+
+.favoriteButton {
+  background-color: transparent;
+  color: #c8bf9b; /* color.text.icon */
+}
+
+.favoriteButton:hover {
+  background-color: #b5543a; /* color.accent.emotive */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.favoriteButton.favorited {
+  background-color: #b5543a; /* color.accent.emotive */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.clearButton {
+  padding: 8px 16px; /* spacing.2 spacing.4 */
+  background-color: transparent;
+  color: #5c4e25; /* color.accent.earthy */
+  border: 1px solid #5c4e25; /* color.accent.earthy */
+  border-radius: 999px; /* radius.pill */
+  font-family: 'EB Garamond', serif; /* typography.font-family.body */
+  font-weight: 600; /* typography.font-weight.semibold */
+  font-size: 14px; /* typography.font-size.sm */
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4,0,0.2,1); /* motion.duration.fast + motion.timing.standard */
+}
+
+.clearButton:hover {
+  background-color: #5c4e25; /* color.accent.earthy */
+  color: #ffffff; /* color.neutral.white */
+}
+
+.clearButton:focus {
+  outline: none;
+  ring: 2px solid #5c4e25; /* color.accent.earthy */
+  ring-opacity: 0.5;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) { /* breakpoints.tablet */
+  .promptCard {
+    padding: 20px; /* spacing.5 */
+  }
+  
+  .promptText {
+    font-size: 20px; /* typography.font-size.lg */
+  }
+}
