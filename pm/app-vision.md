@@ -7,7 +7,7 @@
 - user can view and manage favorites
 - generation screen shows current prompt in a large card, with colored buttons either side
 - buttons trigger the LLM to riff off of the current prompt, but in ways that evolve the prompt in a given direction: wild, pure, earthy, classy, emotive, and complex
-- look and feel is minimialist but with an understated wow factor; that is, sleek and classy with an earthy, forest-like toning
+- look and feel is minimalist but with an understated wow factor; that is, sleek and classy with an earthy, forest-like toning
 - inspired in part by the idea of Brian Eno's 'Oblique Strategies'; but this is a modern take
 
 # Target Users
@@ -20,5 +20,5 @@
 - i am able to discover really great ideation prompts that go on to inspire creation sessions in which I produce work I'm proud of 
 
 # Constraints
-- deploy to vercel, but no logins/accounts for now -- prefs and saves are local to the device
+- deploy to Vercel, but no logins/accounts for now -- prefs and saves are local to the device
 - mobile-first approach, but able to handle big screen (typically would be a tall, narrow window beside a DAW)

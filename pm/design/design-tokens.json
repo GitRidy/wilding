@@ -29,22 +29,22 @@
             }
         },
         "accent": {
-            "calm": {
+            "pure": {
                 "value": "#62827c"
             },
-            "growth": {
+            "earthy": {
                 "value": "#5c4e25"
             },
-            "mystic": {
+            "classy": {
                 "value": "#4d3b52"
             },
-            "energy": {
+            "wild": {
                 "value": "#a24428"
             },
-            "affection": {
+            "emotive": {
                 "value": "#b5543a"
             },
-            "flow": {
+            "complex": {
                 "value": "#275752"
             }
         },

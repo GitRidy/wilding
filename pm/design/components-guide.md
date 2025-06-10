@@ -632,12 +632,12 @@ interface DirectionButtonRowProps {
 ### Structure
 ```jsx
 <div className="direction-button-row">
-  <DirectionButton variant="calm" />
-  <DirectionButton variant="growth" />
-  <DirectionButton variant="mystic" />
-  <DirectionButton variant="energy" />
-  <DirectionButton variant="affection" />
-  <DirectionButton variant="flow" />
+  <DirectionButton variant="pure" />
+  <DirectionButton variant="earthy" />
+  <DirectionButton variant="classy" />
+  <DirectionButton variant="wild" />
+  <DirectionButton variant="emotive" />
+  <DirectionButton variant="complex" />
 </div>
 ```
 
@@ -693,7 +693,7 @@ See visual: `mockup03.png` (row of colored buttons below prompt card)
 Themed action button for evolving prompts in specific creative directions.
 
 ### Design Tokens
-- Background colors: `{color.accent.calm}`, `{color.accent.growth}`, `{color.accent.mystic}`, `{color.accent.energy}`, `{color.accent.affection}`, `{color.accent.flow}`
+- Background colors: `{color.accent.pure}`, `{color.accent.earthy}`, `{color.accent.classy}`, `{color.accent.wild}`, `{color.accent.emotive}`, `{color.accent.complex}`
 - Text color: `{color.text.inverse}`
 - Border radius: `{radius.md}`
 - Padding: `{spacing.2} {spacing.3}`
@@ -703,7 +703,7 @@ Themed action button for evolving prompts in specific creative directions.
 ### Props & Variants
 ```typescript
 interface DirectionButtonProps {
-  variant: 'calm' | 'growth' | 'mystic' | 'energy' | 'affection' | 'flow';
+  variant: 'pure' | 'earthy' | 'classy' | 'wild' | 'emotive' | 'complex';
   icon?: string;
   label: string;
   onClick?: () => void;
@@ -739,28 +739,28 @@ interface DirectionButtonProps {
   font-weight: {typography.font-weight.semibold};
 }
 
-.direction-button--calm {
-  background-color: {color.accent.calm};
+.direction-button--pure {
+  background-color: {color.accent.pure};
 }
 
-.direction-button--growth {
-  background-color: {color.accent.growth};
+.direction-button--earthy {
+  background-color: {color.accent.earthy};
 }
 
-.direction-button--mystic {
-  background-color: {color.accent.mystic};
+.direction-button--classy {
+  background-color: {color.accent.classy};
 }
 
-.direction-button--energy {
-  background-color: {color.accent.energy};
+.direction-button--wild {
+  background-color: {color.accent.wild};
 }
 
-.direction-button--affection {
-  background-color: {color.accent.affection};
+.direction-button--emotive {
+  background-color: {color.accent.emotive};
 }
 
-.direction-button--flow {
-  background-color: {color.accent.flow};
+.direction-button--complex {
+  background-color: {color.accent.complex};
 }
 
 .direction-button:hover {
@@ -796,11 +796,11 @@ interface DirectionButtonProps {
 ```jsx
 import { DirectionButton } from '@/components/ui/direction-button';
 
-<DirectionButton 
-  variant="calm"
+<DirectionButton
+  variant="pure"
   icon="leaf"
-  label="Calm"
-  onClick={() => evolvePrompt('calm')}
+  label="Pure"
+  onClick={() => evolvePrompt('pure')}
 />
 ```
 

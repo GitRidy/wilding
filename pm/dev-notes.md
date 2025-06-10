@@ -1,7 +1,5 @@
 **File Purpose**: Record notes by the developer for reference during future tasks
 
-
-
 ## Next.js 15 key changes
 
 Based on the information I've gathered from Context7 about Next.js 15, I can see that there are several key changes in Next.js 15 that I should be aware of for future tasks in this project:
